@@ -1,31 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Charlie avatars</title>
+    <title>Charlie</title>
     <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+
+      h4 {
+        margin: 20px 0 0 0;
+      }
+
+      ul {
+        margin: 0 0 20px 0;
+      }
+
       #container {
         display: grid;
-        grid-template-areas: "img img img"
+        grid-template-columns: 250px auto;
+        left: 0;
+        position: absolute;
+        top: 0;
       }
+
+      #controls {
+        background-color: #333;
+        color: white;
+        min-height: 100vh;
+        padding: 0 20px;
+      }
+
       img {
-        max-width: 30vw;
+        max-height: 98vh;
+        position: absolute;
+      }
+
+      img[data-element] {
+        display: none;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <img src="charlie-original.png">
-      <img src="charlie-no-pupils.png">
-      <img src="charlie-murder-smile.png">
-      <img src="charlie-bowtie.png">
-      <img src="charlie-lipstick.png">
-      <img src="charlie-lipstick-blush.png">
-      <img src="charlie-blush.png">
-      <img src="charlie-long-lashes.png">
-      <img src="charlie-two-bow.png">
-      <img src="charlie-outside-lashes.png">
-      <img src="charlie-hoodie.png">
-      <img src="charlie-login.png">
+      <div id="controls">
+        <h4>Clothes</h4>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="clothes" value="18f-hoodie" />
+              18F hoodie
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="clothes" value="login-blazer" />
+              Login blazer
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="clothes"
+                value="none"
+                checked="checked"
+              />
+              None
+            </label>
+          </li>
+        </ul>
+
+        <h4>
+          <label>
+            <input type="checkbox" value="lipstick"/>
+            Lipstick
+          </label>
+        </h4>
+
+        <h4>Blush</h4>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="blush" value="blush-pink" />
+              Pink blush
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="blush" value="blush-purple" />
+              Purple blush
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="blush"
+                value="blush-none"
+                checked="checked"
+              />
+              None
+            </label>
+          </li>
+        </ul>
+
+        <h4>Bow tie</h4>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="bow-tie" value="bow-tie-blue" />
+              Blue bow tie
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="bow-tie" value="bow-tie-pink" />
+              Pink bow tie
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="bow-tie"
+                value="none"
+                checked="checked"
+              />
+              None
+            </label>
+          </li>
+        </ul>
+
+        <h4>
+          <label>
+            <input type="checkbox" value="antenna-bow" />
+            Antenna bow
+          </label>
+        </h4>
+
+        <h4>Eyelashes</h4>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="lashes" value="lashes-inside" />
+              Inside
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="lashes" value="lashes-outside" />
+              Outside
+            </label>
+          </li>
+          <li>
+            <label>
+              <input
+                type="radio"
+                name="lashes"
+                value="lashes-none"
+                checked="checked"
+              />
+              None
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div id="charlie">
+        <img src="parts/base_0.png" />
+        <img src="parts/18f_hoodie_0.png" data-element="18f-hoodie" />
+        <img src="parts/login_blazer.png" data-element="login-blazer" />
+        <img src="parts/base_1.png" />
+        <img src="parts/base_2.png" />
+        <img src="parts/base_3.png" />
+        <img src="parts/blush_pink.png" data-element="blush-pink" />
+        <img src="parts/blush_purple.png" data-element="blush-purple" />
+        <img src="parts/lashes_inside.png" data-element="lashes-inside" />
+        <img src="parts/lashes_outside.png" data-element="lashes-outside" />
+        <img src="parts/lipstick.png" data-element="lipstick" />
+        <img src="parts/18f_hoodie_1.png" data-element="18f-hoodie" />
+        <img src="parts/antenna_bow.png" data-element="antenna-bow" />
+        <img src="parts/bow_tie_blue.png" data-element="bow-tie-blue" />
+        <img src="parts/bow_tie_pink.png" data-element="bow-tie-pink" />
+      </div>
     </div>
+
+    <script type="text/javascript">
+      const controlsChanged = () => {
+        Array.from(document.querySelectorAll("[data-element]")).forEach(
+          (element) => {
+            element.style.display = "none";
+          }
+        );
+
+        console.log(Array.from(document.querySelectorAll("input"))
+          .filter((element) => element.checked))
+
+        const checked = Array.from(document.querySelectorAll("input"))
+          .filter((element) => element.checked)
+          .forEach((element) => {
+            Array.from(
+              document.querySelectorAll(`[data-element="${element.value}"]`)
+            ).forEach((element) => {
+              element.style.display = "block";
+            });
+          });
+      };
+
+      Array.from(document.querySelectorAll("input")).forEach((input) => {
+        input.addEventListener("change", controlsChanged);
+      });
+    </script>
   </body>
 </html>
