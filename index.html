@@ -72,7 +72,7 @@
 
         <h4>
           <label>
-            <input type="checkbox" value="lipstick"/>
+            <input type="checkbox" value="lipstick" />
             Lipstick
           </label>
         </h4>
@@ -185,28 +185,23 @@
     </div>
 
     <script type="text/javascript">
+      const $ = (selector) => Array.from(document.querySelectorAll(selector));
+
       const controlsChanged = () => {
-        Array.from(document.querySelectorAll("[data-element]")).forEach(
-          (element) => {
-            element.style.display = "none";
-          }
-        );
+        $("[data-element]").forEach((element) => {
+          element.style.display = "none";
+        });
 
-        console.log(Array.from(document.querySelectorAll("input"))
-          .filter((element) => element.checked))
-
-        const checked = Array.from(document.querySelectorAll("input"))
+        const checked = $("input")
           .filter((element) => element.checked)
           .forEach((element) => {
-            Array.from(
-              document.querySelectorAll(`[data-element="${element.value}"]`)
-            ).forEach((element) => {
+            $(`[data-element="${element.value}"]`).forEach((element) => {
               element.style.display = "block";
             });
           });
       };
 
-      Array.from(document.querySelectorAll("input")).forEach((input) => {
+      $("input").forEach((input) => {
         input.addEventListener("change", controlsChanged);
       });
     </script>
