@@ -1,0 +1,29 @@
+{
+  "name": "charlie-avatars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "make.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgwalker/charlie-avatars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgwalker/charlie-avatars/issues"
+  },
+  "homepage": "https://github.com/mgwalker/charlie-avatars#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "prettier": {},
+  "dependencies": {
+    "progress": "^2.0.3"
+  }
+}
