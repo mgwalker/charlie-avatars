@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Charlie</title>
@@ -30,12 +30,7 @@
         padding: 0 20px;
       }
 
-      img {
-        max-height: 98vh;
-        position: absolute;
-      }
-
-      img[data-element] {
+      #parts {
         display: none;
       }
     </style>
@@ -69,7 +64,9 @@
           <option value="logo_cloudgov">Cloud.gov</option>
           <option value="logo_coe">COE</option>
           <option value="logo_digitalgov">DigitalGov</option>
-          <option value="logo_digitalgov-university">DigitalGov University</option>
+          <option value="logo_digitalgov-university">
+            DigitalGov University
+          </option>
           <option value="logo_federalist">Federalist</option>
           <option value="logo_fedramp">FedRAMP</option>
           <option value="logo_logingov">Login.gov</option>
@@ -118,123 +115,353 @@
           <option value="eyelash_short">Short</option>
           <option value="eyelash_top">Top</option>
         </select>
+
+        <br /><br />
+        <button id="save" type="button">Save</button>
+      </div>
+
+      <div id="parts">
+        <img src="parts/0_antenna.png" data-layer="0" />
+
+        <img
+          src="parts/1_hoodie_black.png"
+          data-layer="1"
+          data-element="hoodie_black"
+        />
+        <img
+          src="parts/1_hoodie_blue.png"
+          data-layer="1"
+          data-element="hoodie_blue"
+        />
+        <img
+          src="parts/1_hoodie_green.png"
+          data-layer="1"
+          data-element="hoodie_green"
+        />
+        <img
+          src="parts/1_hoodie_red.png"
+          data-layer="1"
+          data-element="hoodie_red"
+        />
+        <img
+          src="parts/1_hoodie_giraffe.png"
+          data-layer="1"
+          data-element="hoodie_giraffe"
+        />
+
+        <img src="parts/2_body_orange.png" data-layer="2" />
+
+        <img
+          src="parts/3_sweater_blue.png"
+          data-layer="3"
+          data-element="sweater_blue"
+        />
+        <img
+          src="parts/3_sweater_green.png"
+          data-layer="3"
+          data-element="sweater_green"
+        />
+        <img
+          src="parts/3_sweater_purple.png"
+          data-layer="3"
+          data-element="sweater_purple"
+        />
+        <img
+          src="parts/3_sweater_red.png"
+          data-layer="3"
+          data-element="sweater_red"
+        />
+        <img
+          src="parts/3_sweater_yellow.png"
+          data-layer="3"
+          data-element="sweater_yellow"
+        />
+
+        <img src="parts/4_body_outline.png" data-layer="4" />
+
+        <img
+          src="parts/5_hoodie_shadow.png"
+          data-layer="5"
+          data-element="hoodie_black"
+        />
+        <img
+          src="parts/5_hoodie_shadow.png"
+          data-layer="5"
+          data-element="hoodie_giraffe"
+        />
+
+        <img src="parts/6_neck.png" data-layer="6" />
+
+        <img
+          src="parts/7_blush_pink.png"
+          data-layer="7"
+          data-element="blush_pink"
+        />
+        <img
+          src="parts/7_blush_purple.png"
+          data-layer="7"
+          data-element="blush_purple"
+        />
+
+        <img
+          src="parts/8_lipstick.png"
+          data-layer="8"
+          data-element="lipstick"
+        />
+
+        <img src="parts/9_mouth_fill.png" data-layer="9" />
+
+        <img src="parts/10_mouth_outline.png" data-layer="10" />
+
+        <img
+          src="parts/11_eye_round_fill.png"
+          data-layer="11"
+          data-element="eye_round"
+        />
+        <img
+          src="parts/11_eye_round_fill.png"
+          data-layer="11"
+          data-element="eye_round_pupil"
+        />
+        <img
+          src="parts/11_eye_round_fill.png"
+          data-layer="11"
+          data-element="eye_round_side"
+        />
+
+        <img
+          src="parts/12_eye_round_pupil.png"
+          data-layer="12"
+          data-element="eye_round_pupil"
+        />
+        <img
+          src="parts/12_eye_round_side.png"
+          data-layer="11"
+          data-element="eye_round_side"
+        />
+
+        <img
+          src="parts/13_eye_round_outline.png"
+          data-layer="13"
+          data-element="eye_round"
+        />
+        <img
+          src="parts/13_eye_round_outline.png"
+          data-layer="13"
+          data-element="eye_round_pupil"
+        />
+        <img
+          src="parts/13_eye_round_outline.png"
+          data-layer="13"
+          data-element="eye_round_side"
+        />
+        <img
+          src="parts/13_eye_triangle.png"
+          data-layer="13"
+          data-element="eye_triangle"
+        />
+
+        <img
+          src="parts/14_eyelash_long.png"
+          data-layer="14"
+          data-element="eyelash_long"
+        />
+        <img
+          src="parts/14_eyelash_outside.png"
+          data-layer="14"
+          data-element="eyelash_outside"
+        />
+        <img
+          src="parts/14_eyelash_short.png"
+          data-layer="14"
+          data-element="eyelash_short"
+        />
+        <img
+          src="parts/14_eyelash_top.png"
+          data-layer="14"
+          data-element="eyelash_top"
+        />
+
+        <img
+          src="parts/15_hoodie_black.png"
+          data-layer="15"
+          data-element="hoodie_black"
+        />
+        <img
+          src="parts/15_hoodie_blue.png"
+          data-layer="15"
+          data-element="hoodie_blue"
+        />
+        <img
+          src="parts/15_hoodie_green.png"
+          data-layer="15"
+          data-element="hoodie_green"
+        />
+        <img
+          src="parts/15_hoodie_red.png"
+          data-layer="15"
+          data-element="hoodie_red"
+        />
+        <img
+          src="parts/15_hoodie_giraffe.png"
+          data-layer="15"
+          data-element="hoodie_giraffe"
+        />
+
+        <img
+          src="parts/16_logo_18f.png"
+          data-layer="16"
+          data-element="logo_18f"
+        />
+        <img
+          src="parts/16_logo_challengegov.png"
+          data-layer="16"
+          data-element="logo_challengegov"
+        />
+        <img
+          src="parts/16_logo_cloudgov.png"
+          data-layer="16"
+          data-element="logo_cloudgov"
+        />
+        <img
+          src="parts/16_logo_coe.png"
+          data-layer="16"
+          data-element="logo_coe"
+        />
+        <img
+          src="parts/16_logo_digitalgov.png"
+          data-layer="16"
+          data-element="logo_digitalgov"
+        />
+        <img
+          src="parts/16_logo_digitalgov-university.png"
+          data-layer="16"
+          data-element="logo_digitalgov-university"
+        />
+        <img
+          src="parts/16_logo_federalist.png"
+          data-layer="16"
+          data-element="logo_federalist"
+        />
+        <img
+          src="parts/16_logo_fedramp.png"
+          data-layer="16"
+          data-element="logo_fedramp"
+        />
+        <img
+          src="parts/16_logo_logingov.png"
+          data-layer="16"
+          data-element="logo_logingov"
+        />
+        <img
+          src="parts/16_logo_pif.png"
+          data-layer="16"
+          data-element="logo_pif"
+        />
+        <img
+          src="parts/16_logo_searchgov.png"
+          data-layer="16"
+          data-element="logo_searchgov"
+        />
+        <img
+          src="parts/16_logo_usagov.png"
+          data-layer="16"
+          data-element="logo_usagov"
+        />
+
+        <img
+          src="parts/17_bowtie_blue.png"
+          data-layer="17"
+          data-element="bowtie_blue"
+        />
+        <img
+          src="parts/17_bowtie_pink.png"
+          data-layer="17"
+          data-element="bowtie_pink"
+        />
+
+        <img
+          src="parts/18_bowtie_outline.png"
+          data-layer="18"
+          data-element="bowtie_blue"
+        />
+        <img
+          src="parts/18_bowtie_outline.png"
+          data-layer="18"
+          data-element="bowtie_pink"
+        />
+
+        <img
+          src="parts/19_antennabow_blue.png"
+          data-layer="19"
+          data-element="antennabow_blue"
+        />
+
+        <img
+          src="parts/20_antennabow_outline.png"
+          data-layer="20"
+          data-element="antennabow_blue"
+        />
       </div>
 
       <div id="charlie">
-        <img src="parts/0_antenna.png" />
-
-        <img src="parts/1_hoodie_black.png" data-element="hoodie_black" />
-        <img src="parts/1_hoodie_blue.png" data-element="hoodie_blue" />
-        <img src="parts/1_hoodie_green.png" data-element="hoodie_green" />
-        <img src="parts/1_hoodie_red.png" data-element="hoodie_red" />
-        <img src="parts/1_hoodie_giraffe.png" data-element="hoodie_giraffe" />
-
-        <img src="parts/2_body_orange.png" />
-
-        <img src="parts/3_sweater_blue.png" data-element="sweater_blue" />
-        <img src="parts/3_sweater_green.png" data-element="sweater_green" />
-        <img src="parts/3_sweater_purple.png" data-element="sweater_purple" />
-        <img src="parts/3_sweater_red.png" data-element="sweater_red" />
-        <img src="parts/3_sweater_yellow.png" data-element="sweater_yellow" />
-
-        <img src="parts/4_body_outline.png" />
-
-        <img src="parts/5_hoodie_shadow.png" data-element="hoodie_black" />
-        <img src="parts/5_hoodie_shadow.png" data-element="hoodie_giraffe" />
-
-        <img src="parts/6_neck.png" />
-
-        <img src="parts/7_blush_pink.png" data-element="blush_pink" />
-        <img src="parts/7_blush_purple.png" data-element="blush_purple" />
-
-        <img src="parts/8_lipstick.png" data-element="lipstick" />
-
-        <img src="parts/9_mouth_fill.png" />
-
-        <img src="parts/10_mouth_outline.png" />
-
-        <img src="parts/11_eye_round_fill.png" data-element="eye_round" />
-        <img src="parts/11_eye_round_fill.png" data-element="eye_round_pupil" />
-        <img src="parts/11_eye_round_fill.png" data-element="eye_round_side" />
-
-        <img src="parts/12_eye_round_pupil.png" data-element="eye_round_pupil" />
-        <img src="parts/12_eye_round_side.png" data-element="eye_round_side" />
-
-        <img src="parts/13_eye_round_outline.png" data-element="eye_round" />
-        <img src="parts/13_eye_round_outline.png" data-element="eye_round_pupil" />
-        <img src="parts/13_eye_round_outline.png" data-element="eye_round_side" />
-        <img src="parts/13_eye_triangle.png" data-element="eye_triangle" />
-
-        <img src="parts/14_eyelash_long.png" data-element="eyelash_long" />
-        <img src="parts/14_eyelash_outside.png" data-element="eyelash_outside" />
-        <img src="parts/14_eyelash_short.png" data-element="eyelash_short" />
-        <img src="parts/14_eyelash_top.png" data-element="eyelash_top" />
-
-        <img src="parts/15_hoodie_black.png" data-element="hoodie_black" />
-        <img src="parts/15_hoodie_blue.png" data-element="hoodie_blue" />
-        <img src="parts/15_hoodie_green.png" data-element="hoodie_green" />
-        <img src="parts/15_hoodie_red.png" data-element="hoodie_red" />
-        <img src="parts/15_hoodie_giraffe.png" data-element="hoodie_giraffe" />
-
-        <img src="parts/16_logo_18f.png" data-element="logo_18f" />
-        <img src="parts/16_logo_challengegov.png" data-element="logo_challengegov" />
-        <img src="parts/16_logo_cloudgov.png" data-element="logo_cloudgov" />
-        <img src="parts/16_logo_coe.png" data-element="logo_coe" />
-        <img src="parts/16_logo_digitalgov.png" data-element="logo_digitalgov" />
-        <img src="parts/16_logo_digitalgov-university.png" data-element="logo_digitalgov-university" />
-        <img src="parts/16_logo_federalist.png" data-element="logo_federalist" />
-        <img src="parts/16_logo_fedramp.png" data-element="logo_fedramp" />
-        <img src="parts/16_logo_logingov.png" data-element="logo_logingov" />
-        <img src="parts/16_logo_pif.png" data-element="logo_pif" />
-        <img src="parts/16_logo_searchgov.png" data-element="logo_searchgov" />
-        <img src="parts/16_logo_usagov.png" data-element="logo_usagov" />
-
-        <img src="parts/17_bowtie_blue.png" data-element="bowtie_blue" />
-        <img src="parts/17_bowtie_pink.png" data-element="bowtie_pink" />
-
-        <img src="parts/18_bowtie_outline.png" data-element="bowtie_blue" />
-        <img src="parts/18_bowtie_outline.png" data-element="bowtie_pink" />
-
-        <img src="parts/19_antennabow_blue.png" data-element="antennabow_blue" />
-
-        <img src="parts/20_antennabow_outline.png" data-element="antennabow_blue" />
+        <canvas width="660" height="780"></canvas>
       </div>
     </div>
 
     <script type="text/javascript">
       const $ = (selector) => Array.from(document.querySelectorAll(selector));
 
+      const images = $("#parts img").sort(
+        (a, b) => a.dataset.layer - b.dataset.layer,
+      );
+
+      const canvas = $("#charlie canvas")[0];
+      const context = canvas?.getContext("2d");
+
       const controlsChanged = () => {
         $("[data-element]").forEach((element) => {
           element.style.display = "none";
         });
+        context?.clearRect(0, 0, canvas.width, canvas.height);
+
+        const enabled = new Set();
 
         $("select").forEach((element) => {
-          $(`[data-element="${element.value}"]`).forEach((element) => {
-            element.style.display = "block";
-          });
+          enabled.add(element.value);
         });
 
         $("input")
           .filter((element) => element.checked)
           .forEach((element) => {
-            $(`[data-element="${element.value}"]`).forEach((element) => {
-              element.style.display = "block";
-            });
+            enabled.add(element.value);
           });
+
+        for (const image of images) {
+          if (!image.dataset.element || enabled.has(image.dataset.element)) {
+            context?.drawImage(image, 0, 0);
+          }
+        }
       };
 
       $("input, select").forEach((input) => {
         input.addEventListener("change", controlsChanged);
       });
 
-      $("[checked]")
-        .map((element) => element.value)
-        .forEach((value) => {
-          $(`[data-element="${value}"]`).forEach((element) => {
-            element.style.display = "block";
-          });
-        });
+      setTimeout(controlsChanged, 100);
+
+      $("#save")[0].addEventListener("click", () => {
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "charlie.png";
+          link.click();
+          setTimeout(() => {
+            URL.revokeObjectURL(url);
+          }, 500);
+        }, "image/png");
+      });
     </script>
   </body>
 </html>
